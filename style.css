@@ -8,20 +8,25 @@
   font-family: "kanit";
   src: url(font/Kanit-Regular.ttf);
 }
+
 @font-face {
   font-family: "roboto";
   src: url(font/RobotoCondensed-Bold.ttf);
 }
+
 @font-face {
   font-family: "right";
   src: url(font/Righteous-Regular.ttf);
 }
+
 body {
   background-color: rgb(63, 93, 243);
   color: white;
   overflow-x: hidden;
 }
+
 /* header */
+header {}
 
 .navbar {
   display: flex;
@@ -30,14 +35,21 @@ body {
   background-color: rgb(132, 51, 238);
   color: white;
 }
+
 .logo-section {
   margin: 0.5rem;
 }
-.navbar-links ul {
+
+.navbar-links {
   margin: 0;
   padding: 0;
   display: flex;
 }
+
+.navbar-links ul {
+  display: flex;
+}
+
 .navbar-links li {
   list-style: none;
 }
@@ -49,11 +61,13 @@ body {
   display: block;
   font-family: "roboto";
 }
+
 .navbar-links li a:hover {
   background-color: rgb(15, 142, 201);
   border-radius: 20px;
   border: none;
 }
+
 /* toggle */
 .toggle-button {
   position: absolute;
@@ -65,18 +79,21 @@ body {
   width: 30px;
   height: 21px;
 }
+
 .toggle-button .bar {
   height: 3px;
   width: 100%;
   background-color: white;
   border-radius: 10px;
 }
+
 /* media */
 @media screen and (max-width: 1240px) {
   #gambar {
     width: 60%;
   }
 }
+
 @media screen and (max-width: 576px) {
   .toggle-button {
     display: flex;
@@ -85,31 +102,40 @@ body {
   .navbar-links {
     display: none;
     width: 100%;
+    margin-left: 200px;
+
   }
+
   .navbar {
     flex-direction: column;
     align-items: flex-start;
+    position: absolute;
+    width: 100%;
   }
+
   .navbar-links ul {
     flex-direction: column;
-  }
-  .navbar-links li {
-    text-align: center;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
   }
+
+
+
   .navbar-links li a {
     padding: 0.5rem 1rem;
   }
+
   .navbar-links.active {
     display: flex;
   }
+
   body {
     margin: 0;
     display: absolute;
     padding: 0;
   }
 }
+
 .visi,
 .visi-info {
   margin: 0;
@@ -123,6 +149,7 @@ body {
   padding: 0 10px;
   font-family: "kanit";
 }
+
 .main-content {
   padding-bottom: 120px;
   padding-top: 200px;
@@ -130,20 +157,24 @@ body {
   height: 100vh;
   background-color: blue;
 }
+
 .pictures {
   display: block;
   justify-content: center;
   text-align: center;
   padding: 10px;
 }
+
 .brand {
   padding-bottom: 20px;
   font-family: "right";
   font-size: 40px;
 }
+
 .kata {
   font-family: "kanit";
 }
+
 .visi,
 .visi-info {
   margin: 10px 40px 10px 40px;
@@ -156,45 +187,56 @@ body {
   width: 100%;
   padding: 20px 0 20px 0;
 }
+
 /*detail*/
 .ltr {
   padding-top: 50px;
 }
+
 .list {
   padding: 10px 20px 10px 20px;
 }
+
 .text {
   text-align: justify;
 }
+
 /* footer */
 .closing {
   margin: 20px;
 }
+
 #contact {
   margin: 10px;
   display: flex;
   justify-content: space-between;
 }
+
 .media ul li {
   display: block;
   margin-left: 10px;
 }
+
 .media ul li a {
   text-decoration: none;
   color: white;
 }
+
 .media ul li a:hover {
   border-bottom: 2px solid white;
 }
+
 .sosmed {
   height: 30px;
   padding: 5px;
   margin-top: 5px;
   margin-bottom: -10px;
 }
+
 .email a {
   text-decoration: none;
 }
+
 footer {
   margin: 20px;
   padding: 5px;
