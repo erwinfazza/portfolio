@@ -78,6 +78,7 @@ body {
   justify-content: space-between;
   width: 30px;
   height: 21px;
+
 }
 
 .toggle-button .bar {
@@ -85,6 +86,29 @@ body {
   width: 100%;
   background-color: white;
   border-radius: 10px;
+  transition: all 0.5s;
+}
+
+input {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  opacity: 0;
+  z-index: 1;
+
+}
+
+input:checked~.bar1 {
+  transform: rotate(45deg) translateY(12px);
+
+}
+
+input:checked~.bar2 {
+  transform: scale(0);
+}
+
+input:checked~.bar3 {
+  transform: rotate(-45deg) translateY(-12px);
 }
 
 /* media */
