@@ -19,25 +19,22 @@
   src: url(font/Righteous-Regular.ttf);
 }
 
-body {
-  background-color: rgb(63, 93, 243);
-  color: white;
-  overflow-x: hidden;
-}
+
 
 /* header */
 
+header {
+  background: url(img/bg-desktop.png) no-repeat;
+  background-size: cover;
+}
 
+/* navbar */
 .navbar {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-color: rgb(132, 51, 238);
-  color: white;
-}
 
-.logo-section {
-  margin: 0.5rem;
+  color: white;
 }
 
 .navbar-links {
@@ -64,10 +61,39 @@ body {
 }
 
 .navbar-links li a:hover {
-  background-color: rgb(15, 142, 201);
-  border-radius: 20px;
+  background-color: rgb(7, 74, 105);
+  border-radius: 10px;
   border: none;
 }
+
+/* navbar end */
+
+/* logo */
+.logo-section {
+  margin: 0.5rem;
+  display: flex;
+}
+
+.logos {
+  display: flex;
+  text-decoration: none;
+  color: white;
+}
+
+.logos h3 {
+  margin-left: 20px;
+}
+
+.logos:hover {
+  color: rgb(204, 198, 198);
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+}
+
+/* logo end */
 
 /* toggle */
 .toggle-button {
@@ -182,7 +208,7 @@ input:checked~.bar3 {
   padding-top: 200px;
   align-items: center;
   height: 100vh;
-  background-color: blue;
+
 }
 
 .pictures {
