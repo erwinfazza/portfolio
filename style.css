@@ -48,6 +48,7 @@ body {
 
 .navbar-links ul {
   display: flex;
+  margin-top: 10px;
 }
 
 .navbar-links li {
@@ -126,8 +127,7 @@ input:checked~.bar3 {
   .navbar-links {
     display: none;
     width: 100%;
-    margin-left: 200px;
-
+    color: white;
   }
 
   .navbar {
@@ -135,14 +135,15 @@ input:checked~.bar3 {
     align-items: flex-start;
     position: absolute;
     width: 100%;
+    z-index: 2;
   }
 
   .navbar-links ul {
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    margin: auto;
 
   }
+
 
 
 
@@ -154,13 +155,14 @@ input:checked~.bar3 {
     display: flex;
   }
 
-  body {
-    margin: 0;
-    display: absolute;
-    padding: 0;
+
+
+  .ltr {
+    margin-top: 100px;
   }
 }
 
+/* media end */
 .visi,
 .visi-info {
   margin: 0;
