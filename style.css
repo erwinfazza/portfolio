@@ -19,11 +19,16 @@
   src: url(font/Righteous-Regular.ttf);
 }
 
+body {
+  background-color: rgb(39, 31, 31);
+  color: white;
+}
+
 
 
 /* header */
 
-header {
+.home-page {
   background: url(img/bg-desktop.png) no-repeat;
   background-size: cover;
 }
