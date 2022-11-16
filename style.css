@@ -274,12 +274,15 @@ footer {
 
   .navbar-links ul {
     flex-direction: column;
-    margin: auto;
-    background-color: rgb(59, 55, 55);
-    width: 450px;
+    margin-left: 20px;
+    width: 100%;
     padding-top: 220px;
   }
 
+  .navbar-links li a {
+    width: 100%;
+
+  }
 
 
   .navbar-links.active {
@@ -290,6 +293,10 @@ footer {
     position: absolute;
     z-index: 5;
     top: 10px
+  }
+
+  .logos h3 {
+    margin-top: 5px;
   }
 
   /* content */
