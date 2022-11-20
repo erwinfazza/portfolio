@@ -199,6 +199,26 @@ footer {}
   display: block;
 }
 
+.nav-footer ul {
+  list-style: none;
+}
+
+.nav-footer ul li a {
+  text-decoration: none;
+  color: white;
+
+}
+
+.foot-nav {
+  list-style: none;
+}
+
+.foot-nav li a {
+  text-decoration: none;
+  color: white;
+
+}
+
 /* media */
 @media screen and (max-width: 1240px) {
   #gambar {
