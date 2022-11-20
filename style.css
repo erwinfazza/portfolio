@@ -169,7 +169,9 @@ input:checked~.bar3 {
   padding: 10px;
 }
 
-
+/* .images {
+  width: 350px;
+} */
 
 
 #gambar {
@@ -188,7 +190,15 @@ input:checked~.bar3 {
 
 
 /* footer */
-footer {}
+.foot-logo {
+  display: flex;
+  text-decoration: none;
+}
+
+.foot-logo h3 {
+  color: white;
+  margin: 5px;
+}
 
 .footer {
   margin-top: 100px;
@@ -218,6 +228,7 @@ footer {}
   color: white;
 
 }
+
 
 /* media */
 @media screen and (max-width: 1240px) {
