@@ -242,6 +242,7 @@ input:checked~.bar3 {
     display: flex;
     position: absolute;
     z-index: 5;
+    top: 25px;
   }
 
   .navbar-links {
