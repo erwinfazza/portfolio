@@ -223,7 +223,7 @@ input:checked ~ .bar3 {
 /* media */
 @media screen and (max-width: 1240px) {
   #gambar {
-    width: 60%;
+    width: 100%;
   }
 }
 
