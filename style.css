@@ -24,8 +24,6 @@ body {
   color: white;
 }
 
-
-
 /* header */
 
 .home-page {
@@ -111,7 +109,6 @@ body {
   justify-content: space-between;
   width: 30px;
   height: 21px;
-
 }
 
 .toggle-button .bar {
@@ -128,34 +125,29 @@ input {
   position: absolute;
   opacity: 0;
   z-index: 1;
-
 }
 
-input:checked~.bar1 {
+input:checked ~ .bar1 {
   transform: rotate(45deg) translateY(12px);
-
 }
 
-input:checked~.bar2 {
+input:checked ~ .bar2 {
   transform: scale(0);
 }
 
-input:checked~.bar3 {
+input:checked ~ .bar3 {
   transform: rotate(-45deg) translateY(-12px);
 }
-
 
 /* header end */
 
 /* main-content*/
-
 
 .main-content {
   padding-bottom: 120px;
   padding-top: 200px;
   align-items: center;
   height: 100vh;
-
 }
 
 .bekerja {
@@ -173,7 +165,9 @@ input:checked~.bar3 {
   width: 350px;
 } */
 
-
+.text {
+  text-align: justify;
+}
 #gambar {
   width: 100%;
   padding: 20px 0 20px 0;
@@ -187,7 +181,6 @@ input:checked~.bar3 {
 .list {
   padding: 10px 20px 10px 20px;
 }
-
 
 /* footer */
 .foot-logo {
@@ -216,7 +209,6 @@ input:checked~.bar3 {
 .nav-footer ul li a {
   text-decoration: none;
   color: white;
-
 }
 
 .foot-nav {
@@ -226,9 +218,7 @@ input:checked~.bar3 {
 .foot-nav li a {
   text-decoration: none;
   color: white;
-
 }
-
 
 /* media */
 @media screen and (max-width: 1240px) {
@@ -251,7 +241,6 @@ input:checked~.bar3 {
     position: absolute;
     z-index: 1;
     padding-top: 30px;
-
   }
 
   .navbar {
@@ -271,9 +260,7 @@ input:checked~.bar3 {
 
   .navbar-links li a {
     width: 100%;
-
   }
-
 
   .navbar-links.active {
     display: flex;
@@ -282,7 +269,7 @@ input:checked~.bar3 {
   .logo-section {
     position: absolute;
     z-index: 5;
-    top: 10px
+    top: 10px;
   }
 
   .logos h3 {
@@ -290,7 +277,6 @@ input:checked~.bar3 {
   }
 
   /* content */
-
 
   .ltr {
     margin-top: 100px;
