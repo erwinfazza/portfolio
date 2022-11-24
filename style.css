@@ -28,7 +28,7 @@ body {
 
 .home-page {
   background: url(img/bg-desktop.png) no-repeat;
-  background-size: cover;
+  background-size: 100vmax;
 }
 
 /* navbar */
@@ -241,6 +241,8 @@ input:checked ~ .bar3 {
     position: absolute;
     z-index: 1;
     padding-top: 30px;
+    background-color: black;
+    width: 100vw;
   }
 
   .navbar {
@@ -253,7 +255,7 @@ input:checked ~ .bar3 {
 
   .navbar-links ul {
     flex-direction: column;
-    margin-left: 20px;
+
     width: 100%;
     padding-top: 220px;
   }
@@ -280,5 +282,12 @@ input:checked ~ .bar3 {
 
   .ltr {
     margin-top: 100px;
+  }
+  .main-content {
+    padding-top: 80px;
+    padding-bottom: 50px;
+  }
+  .visi {
+    margin-top: -50px;
   }
 }
