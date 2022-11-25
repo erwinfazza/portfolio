@@ -290,4 +290,7 @@ input:checked ~ .bar3 {
   .visi {
     margin-top: -50px;
   }
+  .tombol {
+    display: none;
+  }
 }
