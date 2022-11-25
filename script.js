@@ -5,7 +5,6 @@ toggleButton.addEventListener("click", () => {
   navbarLinks.classList.toggle("active");
 });
 
+const year = document.querySelector("#current-year");
 
-const year = document.querySelector('#current-year');
-
-year.innerHTML = new Date().getFullYear()
+year.innerHTML = new Date().getFullYear();
