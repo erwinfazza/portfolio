@@ -107,7 +107,18 @@
               
               <hr class="my-4">
     
-              <button class="w-100 btn btn-primary btn-lg" type="submit">Pesan Layanan Sekarang</button>
+              <button class=" btn btn-primary btn-kirim" type="submit">Pesan Layanan Sekarang</button>
+
+              <button class="btn btn-primary text-center btn-loading d-none" type="button" disabled>
+                <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                Loading...
+              </button>
+
+              <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                <strong>Terimakasih</strong> Pesana layanan anda kami terima, <strong>PASTIKAN NOMOR WHATSAPP ANDA BENAR</strong>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+              </div>
+
             </form>
           </div>
         </div>
@@ -130,8 +141,17 @@
       
       const form = document.forms['submit-to-google-sheet']
 
+      const btnKirim = document.querySelector('btn-kirim');
+      const btnLoading = document.querySelector('btn-loading');
+      const alert = document.querySelector('alert');
+
       form.addEventListener('submit', e => {
       e.preventDefault()
+      // ketika tombol di klik hilangkan tombol kirim 
+
+      btnLoading.classList.toggle('d-none');
+      btnKirim.classList.toggle('d-none');
+      
       fetch(scriptURL, { method: 'POST', body: new FormData(form)})
       .then(response => console.log('Success!', response))
       .catch(error => console.error('Error!', error.message))
