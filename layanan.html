@@ -25,11 +25,11 @@
           <!-- form -->
           <div class="col-md-12 col-lg-12">
             <h4 class="mb-3">Pesan Layanan</h4>
-            <form class="needs-validation" novalidate>
+            <form name="submit-to-google-sheet" class="needs-validation" novalidate>
               <div class="row g-3">
                 <div class="col-sm-6">
                   <label for="firstName" class="form-label">Nama Depan</label>
-                  <input type="text" class="form-control" id="firstName" placeholder="" value="" required>
+                  <input name type="text" class="form-control" id="firstName" placeholder="" value="" required>
                   <div class="invalid-feedback">
                     Valid first name is required.
                   </div>
@@ -37,7 +37,7 @@
     
                 <div class="col-sm-6">
                   <label for="lastName" class="form-label">Nama Belakang</label>
-                  <input type="text" class="form-control" id="lastName" placeholder="" value="" required>
+                  <input name="belakang" type="text" class="form-control" id="lastName" placeholder="" value="" required>
                   <div class="invalid-feedback">
                     Valid last name is required.
                   </div>
@@ -45,7 +45,7 @@
     
                 <div class="col-12">
                   <label for="email" class="form-label">Email <span class="text-muted">(Optional)</span></label>
-                  <input type="email" class="form-control" id="email" placeholder="you@example.com">
+                  <input name="email" type="email" class="form-control" id="email" placeholder="you@example.com">
                   <div class="invalid-feedback">
                     Please enter a valid email address for shipping updates.
                   </div>
@@ -53,7 +53,7 @@
     
                 <div class="col-12">
                   <label for="validationCustom01" class="form-label">No. Whatsapp</label>
-                  <input type="text" class="form-control" id="validationCustom01" value="" placeholder="contoh: 085712341234" required>
+                  <input name="wa" type="text" class="form-control" id="validationCustom01" value="" placeholder="contoh: 085712341234" required>
                   <div class="valid-feedback">
                    masukan nomor hp yang benar
                   </div>
@@ -62,7 +62,7 @@
         
                 <div class="col-md-5">
                   <label for="country" class="form-label">Pilih Layanan</label>
-                  <select class="form-select" id="country" required>
+                  <select name="layanan" class="form-select" id="country" required>
                     <option value="">Pilih...</option>
                     <option>Print</option>
                     <option>Pengetikan</option>
@@ -76,7 +76,7 @@
     
                 <div class="col-md-4">
                   <label for="number" class="form-label">Halaman</label>
-                  <select type="number" class="form-select" id="number" required>
+                  <select name="halaman" type="number" class="form-select" id="number" required>
                     <option value="">Pilih...</option>
                     <option value="">1</option>
                     <option value="">2</option>
@@ -92,7 +92,7 @@
     
                 <div class="col-md-3">
                   <label for="formFile" class="form-label">Masukan File</label>
-                  <input class="form-control" type="file" id="formFile">
+                  <input name="file" class="form-control" type="file" id="formFile">
                   <div class="invalid-feedback">
                    file required.
                   </div>
@@ -100,14 +100,14 @@
 
                 <div class="col-md-12">
                   <label for="exampleFormControlTextarea1" class="form-label">Jelaskan Keperluan layanan</label>
-                  <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>  
+                  <textarea name="pesan" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>  
                 </div>
               </div>
     
               <hr class="my-4">
     
               <div class="form-check">
-                <input type="checkbox" class="form-check-input" id="same-address">
+                <input name="bayar" type="checkbox" class="form-check-input" id="same-address">
                 <label class="form-check-label" for="same-address">Pembayaran dilakukan di Toko IntiFazza</label>
               </div>
     
@@ -131,6 +131,19 @@
           
         </div>
       </footer>
+
+    <script>
+      const scriptURL = 'https://script.google.com/macros/s/AKfycbwdpgtbVFD5aWlfeWinm_S3LOcTdHBnQjIE5ECX7KN8ga3iFKi3wVCaq0kKvuGu2n_esA/exec'
+      
+      const form = document.forms['submit-to-google-sheet']
+
+      form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => console.log('Success!', response))
+      .catch(error => console.error('Error!', error.message))
+      })
+    </script>
       
 
       
