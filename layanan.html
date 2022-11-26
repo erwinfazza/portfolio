@@ -141,12 +141,12 @@
       
       const form = document.forms['submit-to-google-sheet']
 
-      const btnKirim = document.querySelector('btn-kirim');
-      const btnLoading = document.querySelector('btn-loading');
+      const btnLoading = document.getElementsByClassName('btn-loading')[0];
+      const btnKirim = document.getElementsByClassName('btn-kirim')[0];
       const alert = document.querySelector('alert');
 
       form.addEventListener('submit', e => {
-      e.preventDefault()
+      e.preventDefault();
       // ketika tombol di klik hilangkan tombol kirim 
 
       btnLoading.classList.toggle('d-none');
