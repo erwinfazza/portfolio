@@ -143,7 +143,7 @@
 
       const btnLoading = document.getElementsByClassName('btn-loading')[0];
       const btnKirim = document.getElementsByClassName('btn-kirim')[0];
-      const alert = document.querySelector('alert');
+      const alert = document.getElementsByClassName('alert')[0];
 
       form.addEventListener('submit', e => {
       e.preventDefault();
@@ -153,7 +153,15 @@
       btnKirim.classList.toggle('d-none');
 
       fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-      .then(response => console.log('Success!', response))
+      .then(response => {
+        // tampilkan tombol kirim hilangkan tombol 
+        btnLoading.classList.toggle('d-none');
+        btnKirim.classList.toggle('d-none');
+        alert.classList.toggle('d-none');
+
+        //rest form 
+        form.reset();
+        console.log('Success!', response)})
       .catch(error => console.error('Error!', error.message))
       })
     </script>
