@@ -21,22 +21,22 @@
         <div class="logo-section">
           <a href="index.html" class="logos">
             <img src="img/logo.png" alt="logo" class="logo" />
-            <h3>IntiFazza</h3>
+            <h3 class="text-light">IntiFazza</h3>
           </a>
         </div>
         <a href="#" class="toggle-button">
-          <input type="checkbox" name="" id="" />
+          <input class="check" type="checkbox" name="" id="" />
           <span class="bar bar1"></span>
           <span class="bar bar2"></span>
           <span class="bar bar3"></span>
         </a>
         <div class="navbar-links text-center">
           <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="work.html">Work</a></li>
-            <li><a href="gallery.html">Gallery</a></li>
-            <li><a href="service.html">Service</a></li>
+            <li><a class="text-light" href="index.html">Home</a></li>
+            <li><a class="text-light" href="about.html">About</a></li>
+            <li><a class="text-light" href="work.html">Work</a></li>
+            <li><a class="text-light" href="gallery.html">Gallery</a></li>
+            <li><a class="text-light" href="service.html">Service</a></li>
           </ul>
         </div>
         <a href="layanan.html">
@@ -84,7 +84,7 @@
                 class="card-img-top"
                 alt="service"
               />
-              <div class="card-body bg-dark text-center">
+              <div class="card-body bg-light text-center">
                 <h5 class="card-title">Pelayanan Terbaik</h5>
                 <p class="card-text">
                   memberikan pelayanan Terbaik dan berkualitas berdasarkan
@@ -97,7 +97,7 @@
           <div class="col-md-4 mt-sm-2">
             <div class="card" style="width: 20rem">
               <img src="img/image10.jpg" class="card-img-top" alt="Software" />
-              <div class="card-body bg-dark text-center">
+              <div class="card-body bg-light text-center">
                 <h5 class="card-title">Software Legal</h5>
                 <p class="card-text">
                   opensource merupakan perangkat lunak yang dapat digunakan
@@ -111,7 +111,7 @@
           <div class="col-md-4 mt-sm-2">
             <div class="card" style="width: 20rem">
               <img src="img/image301.jpg" class="card-img-top" alt="..." />
-              <div class="card-body bg-dark text-center">
+              <div class="card-body bg-light text-center">
                 <h5 class="card-title">Mesin Berkualitas</h5>
                 <p class="card-text">
                   mesin dengan merk ternama dengan kualitas cetak yang baik
@@ -127,6 +127,45 @@
     </div>
 
     <!-- home page end -->
+
+    <!-- form -->
+    <div class="container mt-5 my-5">
+      <div class="row">
+        <div class="col-md-12">
+          <h4>Kritik dan Saran kontak kami melalui email</h4>
+        </div>
+        <div class="col-md-6">
+          <form
+            action="https://formsubmit.co/erwinintifazza@gmail.com"
+            method="POST"
+            id="contact-form"
+            onsubmit="kirimEmail(); reset(); return false;"
+          >
+            <div class="nama">
+              <label for="">Nama</label>
+              <input type="text" name="name" id="nama" required />
+            </div>
+            <div class="email">
+              <label for="email">E-mail</label>
+              <input type="email" name="email" id="email" required />
+            </div>
+            <div class="text-area">
+              <label for="text">Tulis kritik dan Saran Anda</label>
+              <textarea
+                name="message"
+                id="text"
+                cols="44"
+                rows="5"
+                required
+              ></textarea>
+            </div>
+            <div class="submit-form">
+              <button type="submit"><i></i>Kirim</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
 
     <!-- footer -->
     <div class="container-fluid bg-dark mt-md-5 footer">
@@ -185,10 +224,10 @@
 
           <div class="col-md-3">
             <footer>
-              <p>
+              <p class="text-light">
                 &copy; Copyright <span id="current-year"></span> By intiFazza
               </p>
-              <p>
+              <p class="text-light">
                 Image by
                 <a
                   href="https://pixabay.com/users/openclipart-vectors-30363/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=158675"
@@ -206,6 +245,27 @@
       </div>
     </div>
 
+    <script>
+      const contactForm = document.getElementById("contact-form");
+
+      contactForm.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        const url = e.target.action;
+        const formData = new FormData(contactForm);
+
+        fetch(url, {
+          method: "POST",
+          body: formData,
+          mode: "no-cors",
+        })
+          .then(() => {
+            //url thank you
+            window.location.href = "/terimakasih.html";
+          })
+          .catch((e) => alert("error occurred"));
+      });
+    </script>
     <script src="js/bootstrap.js"></script>
     <script src="script.js"></script>
     <script src="fontawesome/fontawesome.js"></script>

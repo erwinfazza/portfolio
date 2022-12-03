@@ -19,11 +19,6 @@
   src: url(font/Righteous-Regular.ttf);
 }
 
-body {
-  background-color: rgb(39, 31, 31);
-  color: white;
-}
-
 /* header */
 
 .home-page {
@@ -36,7 +31,6 @@ body {
   display: flex;
   justify-content: space-around;
   align-items: center;
-
   color: white;
 }
 
@@ -57,14 +51,14 @@ body {
 
 .navbar-links li a {
   text-decoration: none;
-  color: white;
+  color: rgb(34, 5, 5);
   padding: 4px 20px;
   display: block;
   font-family: "roboto";
 }
 
 .navbar-links li a:hover {
-  background-color: rgb(7, 74, 105);
+  background-color: rgb(107, 198, 240);
   border-radius: 10px;
   border: none;
 }
@@ -80,7 +74,7 @@ body {
 .logos {
   display: flex;
   text-decoration: none;
-  color: white;
+  color: rgb(44, 9, 9);
 }
 
 .logos h3 {
@@ -119,7 +113,7 @@ body {
   transition: all 0.5s;
 }
 
-input {
+.check {
   width: 30px;
   height: 30px;
   position: absolute;
@@ -127,15 +121,15 @@ input {
   z-index: 1;
 }
 
-input:checked ~ .bar1 {
+.check:checked ~ .bar1 {
   transform: rotate(45deg) translateY(12px);
 }
 
-input:checked ~ .bar2 {
+.check:checked ~ .bar2 {
   transform: scale(0);
 }
 
-input:checked ~ .bar3 {
+.check:checked ~ .bar3 {
   transform: rotate(-45deg) translateY(-12px);
 }
 
@@ -219,7 +213,32 @@ input:checked ~ .bar3 {
   text-decoration: none;
   color: white;
 }
+/* form */
+.nama > label {
+  margin: 10px 23px 10px 0;
+}
+.email {
+  margin-top: 20px;
+}
+.email label {
+  margin: 10px 22px 10px 0;
+}
+.text-area {
+  margin-top: 20px;
+}
 
+input {
+  width: 348px;
+  height: 40px;
+}
+.submit-form > button {
+  background-color: rgb(40, 159, 233);
+  margin-top: 20px;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 20px;
+  color: white;
+}
 /* media */
 @media screen and (max-width: 1240px) {
   #gambar {
