@@ -226,6 +226,9 @@
 .text-area {
   margin-top: 20px;
 }
+#text {
+  width: 320px;
+}
 
 input {
   width: 250px;
