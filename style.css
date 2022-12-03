@@ -214,6 +214,9 @@
   color: white;
 }
 /* form */
+form {
+  margin: 20px;
+}
 .nama > label {
   margin: 10px 23px 10px 0;
 }
@@ -228,11 +231,15 @@
 }
 #text {
   width: 320px;
+  border: 2px solid rgb(88, 86, 86);
+  border-radius: 4px;
 }
 
 input {
   width: 250px;
   height: 40px;
+  border: 2px solid rgb(88, 86, 86);
+  border-radius: 4px;
 }
 .submit-form > button {
   background-color: rgb(40, 159, 233);
